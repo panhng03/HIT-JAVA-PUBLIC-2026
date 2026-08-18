@@ -2,12 +2,13 @@ package ProductMangement;
 
 public class Product {
     //  thuoc tinh
-    private String id;
-    private String name;
+    private String id;    access modifier
+    private String name;      protected: cung package thi truy cap duoc
+                              public: khac package cung truy cap duoc
     private double price;
     private int quantity;
 
-    // Constructor
+    // Constructor co tham so
     public Product(String id, String name, double price, int quantity){
         this.id = id;
         this.name = name;
@@ -15,12 +16,12 @@ public class Product {
         this.quantity = quantity;
     }
 
-    // khong tham so khi vo danh, khong muon truyen vao
+    // khong tham so khi vo danh, khong muon truyen vao, chi muon khoi tao va gan data sau
     public Product(){}
 
     //getter, setter, private chi su dung trong class rieng cua no, khong sd trong class khac
     //khai bao protected thi chi cung package moi truy cap duoc
-    public String getId(){
+    public String getId(){  // khoi tao can gan du lieu, de public linh hoat voi package khac
         return this.id;
     }
     public String getName(){
